@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+    overflow-y: scroll; /* Enables vertical scrolling */
+    
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.logo span{
+    color: rgb(109,67, 0);
+    text-shadow: 0 0 10px rgb(109,67, 0);
+}
+.hamburg, .cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: black;
+    font-size: 2rem;
+    display: none;
+}
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transform: 0.3s linear;
+}
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(109,67, 0);
+    transition: 0.2s linear;
+}
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+.nav-container .contact-btn{
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(109,67, 0);
+    transition: 0.2s linear;
+}
+.nav-container .contact-btn a{
+    color: rgb(109,67, 0);
+    transition: 0.3s linear;
+}
+.nav-container .contact-btn:hover, .nav-container .contact-btn:hover a{
+    background-color: rgb(109,67, 0);
+    color: white;
+}
+.nav-container .links a:hover{
+    color: rgb(109,67, 0);
+}
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(40%) blur(3px);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+.dropdown .links a{
+    color: white;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+.dropdown .links a:hover{
+    background-color: rgb(109,67, 0);
+}
+
+/* Profile Details */
+#home-video {
+    padding-top: 60px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.profile-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin-top: 0px;
+    
+    
+}
+fieldset {
+    width: 600px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid white; /* Remove default border */
+    position: relative;
+}
+  
+legend {
+    font-weight: bold;
+    padding: 0 5px;
+    margin-top: 0px;
+}
+  
+.profile-details h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color:rgb(247, 245, 242);
+    text-shadow:rgb(240, 178, 79) ;
+}
+form{
+    border: 2px solid white;
+    background-color: rgba(255, 254, 254, 0.4);
+    border-radius: 10px;
+    padding : 10px;
+}
+.form-row {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+  
+.form-row label {
+    font-size: 14px;
+    font-style: 'Times new Roman';
+    margin-bottom: 5px;
+    color: rgb(126, 53, 53);
+    font-weight:25px;
+}
+  
+.form-row input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s;
+}
+  
+.form-row input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid rgb(109,67, 0);
+    box-shadow: 0px 0px 4px #9c27b0;
+}
+textarea {
+    resize: none;
+}
+.radio-group {
+    gap: 10px;
+}
+  
+/* Update Button */
+.update-button {
+    background: rgb(109,67, 0);
+    color: #fff;
+    border: none;
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    transition: background 0.3s, transform 0.3s;
+}
+.update-button:hover {
+    background: rgb(240, 178, 79);
+    color: rgb(109,67, 0);
+    transform: translateY(-3px);
+}
+  
+  /* Subtle Animations */
+.profile-container, fieldset {
+    animation: fadeIn 1s ease-in-out;
+}
+
+  
+
+@media (max-width:800px) {
+    body{
+        overflow-y: visible;
+    }
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .main-container{
+        
+        flex-direction: column;
+    }
+    .nav-container .links{
+        display: none;
+    }
+    .hamburg,.cancel{
+        display: block;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .cancel{
+        color: white;
+    }
+    .main-container .image{
+        width: 80%;
+        margin-bottom: 0px;
+    }
+    .prev, .next {
+        font-size: 13px;
+        padding: 8px;
+    }
+  
+    .caption-container {
+        font-size: 12px;
+        padding: 8px;
+    }
+  
+    .column img {
+        width: 60px;
+    }
+
+    fieldset {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 20px;
+    }
+}

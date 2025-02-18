@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Portfolio | Projects </title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="image" href="images/">
+    <link rel="index" href="index.html">
+    <link rel="about" href="about.html">
+    <link rel="project" href="projects.html">
+    <link rel="skills" href="skills.html">
+    <link rel="contactus" href="contactus.html">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>KAWYA WARNASURIYA</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="projects.html">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="skills.html">Skills</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contactus.html">Contact Us</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contactus.html">Contact Us</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Slideshow Section -->
+    <div class="slideshow-container" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+  
+        <div class="container">
+        <!-- Slide 1 -->
+        <div class="mySlides">
+            <img src="images/01 - Visio sense.png">
+        </div>
+    
+        <!-- Slide 2 -->
+        <div class="mySlides">
+            <img src="images/02 - FlavorFleet.png">
+        </div>
+    
+        <!-- Slide 3 -->
+        <div class="mySlides">
+            <img src="images/03 - Mobile.png">
+        </div>
+            
+        <!-- Slide 4 -->
+        <div class="mySlides">
+            <img src="images/Capture 4.PNG">
+        </div>
+    
+        <!-- Slide 5 -->
+        <div class="mySlides">
+            <img src="images/Capture 5.PNG">
+        </div>
+            
+        <!-- Slide 6 -->
+        <div class="mySlides">
+            <img src="images/Capture 6.PNG">
+        </div>
+            
+        <!-- Navigation buttons -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    
+        <!-- Caption container (Title + Description + GitHub Link) -->
+        <div class="caption-container">
+            <h3 id="caption-title"></h3>
+            <p id="caption-text"></p>
+            <a id="caption-link" href="#" target="_blank" style="display: none;">View on GitHub</a>
+        </div>
+    
+        <!-- Thumbnails -->
+        <div class="row">
+            <div class="column">
+            <img class="demo" src="images/01 - Visio sense.png" onclick="currentSlide(1)" alt="Visio Sense Group Project">
+            </div>
+            <div class="column">
+            <img class="demo" src="images/02 - FlavorFleet.png" onclick="currentSlide(2)" alt="E-Commerces Resturent Website">
+            </div>
+            <div class="column">
+            <img class="demo" src="images/03 - Mobile.png" onclick="currentSlide(3)" alt="Mobile App">
+            </div>
+            <div class="column">
+            <img class="demo" src="images/Capture 4.PNG" onclick="currentSlide(4)" alt="Simple calculaor">
+            </div>
+            <div class="column">
+            <img class="demo" src="images/Capture 5.PNG" onclick="currentSlide(5)" alt="Delivery Product Mbile Application">
+            </div>    
+            <div class="column">
+            <img class="demo" src="images/Capture 6.PNG" onclick="currentSlide(6)" alt="Music Mobile App">
+            </div>
+        </div>
+        </div>
+    </div>
+    
+  <script>
+  let slideIndex = 0;
+  const imageDetails = [
+      { title: "Visio Sense Group Project", description: "Develop a Smart Sunglass with Mobile App.", href:"https://github.com/nazifmhd/Visio-Sense" },
+      { title: "FlavorFleet Resturent WebSite", description: "Developed a responsive website for a restaurant with about, menu and cart section.", href:"#"},
+      { title: "FlavorFleet Mobile App", description: "Developing a mobile app for previous resturent website(ongoing).", href:"https://www.figma.com/design/Gh0TwoEFULiBx9a8miICoc/Untitled?t=MQZiGYpff9jtjqQq-1" },
+      { title: "Simple Calculator", description: "Developed a simple calculator.", href:"https://github.com/KawyaWarnasuriya/Simple-Calculator"},
+      { title: "Angular Group Application", description: "Created Forbes Website Replica (Front-end).", href:"https://github.com/kalana250/Forbes-Dummy" },
+      { title: "InspireMe Mobile App", description: "Developing a Music App.", href:"https://www.figma.com/design/mYjGhP0WiyYFfypI80B6M6/Untitled?node-id=4-211&t=iqtCGsu8FD4RZoCT-1"}
+  ];
+  
+  function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionTitle = document.getElementById("caption-title");
+    let captionText = document.getElementById("caption-text");
+    let captionLink = document.getElementById("caption-link");
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active");
+    }
+    
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].classList.add("active");
+
+    captionTitle.innerHTML = imageDetails[slideIndex - 1].title;
+    captionText.innerHTML = imageDetails[slideIndex - 1].description;
+
+    if (imageDetails[slideIndex - 1].href) {
+        captionLink.href = imageDetails[slideIndex - 1].href;
+        captionLink.style.display = "inline-block";
+        captionLink.innerText = "View on GitHub";
+    } else {
+        captionLink.style.display = "none";
+    }
+
+    setTimeout(showSlides, 10000); // Change slide every 5 seconds
+  }
+  
+  function plusSlides(n) {
+    slideIndex += n - 1;
+    if (slideIndex < 0) slideIndex = imageDetails.length - 1;
+    showSlides();
+  }
+  
+  function currentSlide(n) {
+    slideIndex = n - 1;
+    showSlides();
+  }
+  
+  showSlides();
+  </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({offset:0});
+</script>
+<script>
+    function hamburg(){
+        const navbar = document.querySelector(".dropdown")
+        navbar.style.transform = "translateY(0px)"
+    }
+    function cancel(){
+        const navbar = document.querySelector(".dropdown")
+        navbar.style.transform = "translateY(-500px)"
+    }
+</script>
+</body>
+</html>

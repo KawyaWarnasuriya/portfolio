@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title> Portfolio | Skills</title>
+    <link rel="stylesheet" href="skills.css">
+    <link rel="image" href="images/">
+    <link rel="index" href="index.html">
+    <link rel="about" href="about.html">
+    <link rel="project" href="projects.html">
+    <link rel="skills" href="skills.html">
+    <link rel="contactus" href="contactus.html">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>KAWYA WARNASURIYA</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="projects.html">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="skills.html">Skills</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contactus.html">Contact Me</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown" style="transform: translateY(-500px); transition: 0.3s;">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="contactus.html">Contact Us</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="skill-set" class="container">
+
+        <div class="experience-items">
+            <div class="experience-slide" id="experience-slide">
+                <img src="images/s- Python.png" name="Python">
+                <img src="images/s- Java.png" name="Html">
+                <img src="images/s- CSS.png" name="Css">
+                <img src="images/s- JavaScript.png" name="Js">
+                <img src="images/s- Angular.png" name="Angular">
+                <img src="images/s- Mysql.png" name="MySQL">
+                <img src="images/s- Firebase.png" name="Firebase">
+                <img src="images/s-Flutter.png" name="Flutter">
+                <img src="images/s-Android Studio.png" name="AndroidStudio">
+                <img src="images/s- git.png" name="Git">
+                <img src="images/s- Github.png" name="GitHub">
+                <img src="images/s- Figma.png" name="Figma">
+                <img src="images/s- Canva.png" name="Canva">
+                <img src="images/s- Netbeans.png" name="NetBeans">
+                
+
+                <!-- Skill images will be added dynamically using JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const experienceItems = [
+            { name: "Python", src: "" },
+            { name: "Java", src: "" },
+            { name: "Html", src: "" },
+            { name: "Css", src: "" },
+            { name: "Js", src: "" },
+            { name: "Angular", src: "" },
+            { name: "Mysql", src: "" },
+            { name: "Firebase", src: "" },
+            { name: "Flutter", src: "" },
+            { name: "AndroidStudio", src: "" },
+            { name: "Git", src: "" },
+            { name: "GitHub", src: "" },
+            { name: "Figma", src: "" },
+            { name: "Canva", src: "" },
+            { name: "Netbeans", src: "" },
+        ];
+
+        // Generate infinite scrolling effect by duplicating the list
+        const experienceContainer = document.getElementById("experience-slide");
+
+
+        experienceItems.forEach(item => {
+            const img = document.createElement("img");
+            img.src = item.src;
+            img.alt = item.name;
+            img.classList.add("item-img");
+            experienceContainer.appendChild(img);
+        });
+
+        // Clone images for infinite loop effect
+        experienceItems.forEach(item => {
+            const img = document.createElement("img");
+            img.src = item.src;
+            img.alt = item.name;
+            img.classList.add("item-img");
+            experienceContainer.appendChild(img);
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+    </script>
+    <script>
+        function hamburg(){
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(0px)";
+        }
+        function cancel(){
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(-500px)";
+        }
+    </script>
+</body>
+</html>
