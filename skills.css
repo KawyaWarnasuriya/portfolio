@@ -128,7 +128,7 @@ nav{
 }
 
 .experience-slide {
-    display: flex;
+    display: none;
     gap: 10px;
     animation: scroll 6s linear infinite;
 }
