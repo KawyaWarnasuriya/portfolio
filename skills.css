@@ -112,10 +112,10 @@ nav{
     background-color: rgb(109,67, 0);
 }
 
-/*slideshow*/
+/* Slideshow */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top:60px;
     padding: 20px;
 }
 
@@ -125,19 +125,22 @@ nav{
     white-space: nowrap;
     position: relative;
     width: 100%;
+    height: 50px;
 }
 
 .experience-slide {
-    display: none;
-    gap: 10px;
-    animation: scroll 6s linear infinite;
+    display: flex;
+    gap: 15px;
+    animation: scroll 4s linear infinite;
 }
 
+/* Smaller Image Size */
 .item-img {
-    height: 50px;
-    width: 50px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
+
 
 /* Scroll Animation */
 @keyframes scroll {
