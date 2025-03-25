@@ -211,7 +211,6 @@ textarea {
 }
 .update-button:hover {
     background: rgb(240, 178, 79);
-    color: rgb(109,67, 0);
     transform: translateY(-3px);
 }
   
@@ -220,9 +219,7 @@ textarea {
     animation: fadeIn 1s ease-in-out;
 }
 
-  
-
-@media (max-width:800px) {
+@media (max-width:768px) {
     body{
         overflow-y: visible;
     }
@@ -272,7 +269,7 @@ textarea {
     }
 
     fieldset {
-        width: 90%; /* Adjust width for smaller screens */
+        width: 80%; /* Adjust width for smaller screens */
         padding: 20px;
     }
 }

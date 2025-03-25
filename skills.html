@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <title> Portfolio | Skills</title>
+    <title> Portfolio | Skills </title>
     <link rel="stylesheet" href="skills.css">
     <link rel="image" href="images/">
     <link rel="index" href="index.html">
     <link rel="about" href="about.html">
     <link rel="project" href="projects.html">
     <link rel="skills" href="skills.html">
-    <link rel="contactus" href="contactus.html">
+    <link rel="certificate" href="certificate.html">
+    <link rel="contactus" href="contactus.php">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
@@ -25,6 +26,7 @@
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="projects.html">Projects</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="certificate.html">Certificate</a></div>
                 <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contactus.html">Contact Me</a></div>
             </div>
             <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
@@ -35,6 +37,7 @@
                 <a href="about.html">About</a>
                 <a href="projects.html">Projects</a>
                 <a href="skills.html">Skills</a>
+                <a href="certificate.html">Certificate</a>
                 <a href="contactus.html">Contact Us</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
@@ -42,75 +45,118 @@
     </nav>
 
     <section id="skill-set" class="container">
-
         <div class="experience-items">
             <div class="experience-slide" id="experience-slide">
-                <img src="images/s- Python.png" name="Python">
-                <img src="images/s- Java.png" name="Java">
-                <img src="images/s- HTML.png.png" name="Html">
-                <img src="images/s- CSS.png" name="Css">
-                <img src="images/s- JavaScript.png" name="Js">
-                <img src="images/s- Angular.png" name="Angular">
-                <img src="images/s- Mysql.png" name="MySQL">
-                <img src="images/s- Firebase.png" name="Firebase">
-                <img src="images/s-Flutter.png" name="Flutter">
-                <img src="images/s-Android Studio.png" name="AndroidStudio">
-                <img src="images/s- git.png" name="Git">
-                <img src="images/s- Github.png" name="GitHub">
-                <img src="images/s- Figma.png" name="Figma">
-                <img src="images/s- Canva.png" name="Canva">
-                <img src="images/s- Netbeans.png" name="NetBeans">
-                
-
-                <!-- Skill images will be added dynamically using JavaScript -->
+                <img src="images/s- Python.png" name="Python" class="item-img">
+                <img src="images/s- Java.png" name="Java" class="item-img">
+                <img src="images/s- HTML.png" name="Html" class="item-img">
+                <img src="images/s- CSS.png" name="Css" class="item-img">
+                <img src="images/s- JavaScript.png" name="Js" class="item-img">
+                <img src="images/s- Angular.png" name="Angular" class="item-img">
+                <img src="images/s- Mysql.png" name="MySQL" class="item-img">
+                <img src="images/s- Firebase.png" name="Firebase" class="item-img">
+                <img src="images/s-Flutter.png" name="Flutter" class="item-img">
+                <img src="images/s-Android Studio.png" name="AndroidStudio" class="item-img">
+                <img src="images/s- git.png" name="Git" class="item-img">
+                <img src="images/s- Github.png" name="GitHub" class="item-img">
+                <img src="images/s- Figma.png" name="Figma" class="item-img">
+                <img src="images/s- Canva.png" name="Canva" class="item-img">
+                <img src="images/s- Netbeans.png" name="NetBeans" class="item-img">
             </div>
         </div>
     </section>
 
     <script>
         const experienceItems = [
-            { name: "Python", src: "" },
-            { name: "Java", src: "" },
-            { name: "Html", src: "" },
-            { name: "Css", src: "" },
-            { name: "Js", src: "" },
-            { name: "Angular", src: "" },
-            { name: "Mysql", src: "" },
-            { name: "Firebase", src: "" },
-            { name: "Flutter", src: "" },
-            { name: "AndroidStudio", src: "" },
-            { name: "Git", src: "" },
-            { name: "GitHub", src: "" },
-            { name: "Figma", src: "" },
-            { name: "Canva", src: "" },
-            { name: "Netbeans", src: "" },
+            { name: "Python", src: "images/s-Python.png" },
+            { name: "Java", src: "images/s-Java.png" },
+            { name: "Html", src: "images/s-HTML.png" },
+            { name: "Css", src: "images/s-CSS.png" },
+            { name: "Js", src: "images/s-JavaScript.png" },
+            { name: "Angular", src: "images/s-Angular.png" },
+            { name: "Mysql", src: "images/s-Mysql.png" },
+            { name: "Firebase", src: "images/s-Firebase.png" },
+            { name: "Flutter", src: "images/s-Flutter.png" },
+            { name: "AndroidStudio", src: "images/s-AndroidStudio.png" },
+            { name: "Git", src: "images/s-git.png" },
+            { name: "GitHub", src: "images/s-Github.png" },
+            { name: "Figma", src: "images/s-Figma.png" },
+            { name: "Canva", src: "images/s-Canva.png" },
+            { name: "NetBeans", src: "images/s-Netbeans.png" }
         ];
 
-        // Generate infinite scrolling effect by duplicating the list
+        document.addEventListener("DOMContentLoaded", function () {
         const experienceContainer = document.getElementById("experience-slide");
 
+        // Duplicate the images for smooth infinite scrolling
+        experienceContainer.innerHTML += experienceContainer.innerHTML;
 
-        experienceItems.forEach(item => {
-            const img = document.createElement("img");
-            img.src = item.src;
-            img.alt = item.name;
-            img.classList.add("item-img");
-            experienceContainer.appendChild(img);
-        });
+        // Add CSS dynamically for animation
+        const style = document.createElement("style");
+        style.innerHTML = `
+            @keyframes scroll {
+                from {
+                    transform: translateX(0);
+                }
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+            .experience-slide {
+                display: flex;
+                gap: 20px;
+                animation: scroll 10s linear infinite;
+            }
+        `;
+        document.head.appendChild(style);
+    });
 
-        // Clone images for infinite loop effect
-        experienceItems.forEach(item => {
-            const img = document.createElement("img");
-            img.src = item.src;
-            img.alt = item.name;
-            img.classList.add("item-img");
-            experienceContainer.appendChild(img);
-        });
     </script>
+
+    <!-- My Services Section (Added After Skill Set) -->
+    <section class="services">
+        <h2 class="section-title">My Services</h2>
+        <div class="services-wrapper">
+            <div class="services-container">
+                <div class="service-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Software Development</h3>
+                    <p>Creating responsive and dynamic solutions to users' needs.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Crafting scalable and efficient web applications.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h3>Mobile App Development</h3>
+                    <p>Developing high-performance mobile applications.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <h3>Front End Development</h3>
+                    <p>Building interactive and visually appealing user interfaces.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>Back End Development</h3>
+                    <p>Implementing scalable server-side solutions for seamless data processing.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Designing intuitive experiences for better user interaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({offset:0});
+        AOS.init({ offset: 0 });
     </script>
     <script>
         function hamburg(){

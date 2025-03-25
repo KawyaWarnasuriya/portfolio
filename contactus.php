@@ -1,3 +1,15 @@
+<?php
+// Success/Error message handling
+if (isset($_GET['status'])) {
+    $status = $_GET['status'];
+    if ($status == "success") {
+        echo "<script>alert('Data inserted successfully!');</script>";
+    } elseif ($status == "error") {
+        echo "<script>alert('Something went wrong. Please try again.');</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +23,7 @@
     <link rel="about" href="about.html">
     <link rel="project" href="projects.html">
     <link rel="skills" href="skills.html">
-    <link rel="contactus" href="contactus.html">
+    <link rel="contactus" href="contactus.php">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
@@ -25,7 +37,7 @@
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="projects.html">Projects</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="skills.html">Skills</a></div>
-                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contactus.html">Contact Us</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contactus.php">Contact Us</a></div>
             </div>
             <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
@@ -35,7 +47,7 @@
                 <a href="about.html">About</a>
                 <a href="projects.html">Projects</a>
                 <a href="skills.html">Skills</a>
-                <a href="contactus.html">Contact Us</a>
+                <a href="contactus.php">Contact Us</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
@@ -45,42 +57,45 @@
     </video>
 
     <div class="profile-details">
-        <form>
+    <form action="insert.php" method="POST">  <!-- POST method and action added -->
 
-                <div class="form-row">
-                    <label>Title</label>
-                    <div class="radio-group">
-                    <input type="radio" id="Mr." name="title" value="Mr." />
-                    <label for="mr.">Mr.</label>
-                    <input type="radio" id="Mrs." name="title" value="Mrs." />
-                    <label for="mrs.">Mrs.</label>
-                    <input type="radio" id="Miss." name="title" value="Miss." />
-                    <label for="miss.">Miss.</label>
-                </div>
-                <div class="form-row">
-                    <label for="fullName">Your Name</label>
-                    <input id="fullName" type="text" value="" />
-                </div>
+        <div class="form-row">
+            <label>Title</label>
+            <div class="radio-group">
+                <input type="radio" id="Mr." name="title" value="Mr." />
+                <label for="Mr.">Mr.</label>
+                <input type="radio" id="Mrs." name="title" value="Mrs." />
+                <label for="Mrs.">Mrs.</label>
+                <input type="radio" id="Miss." name="title" value="Miss." />
+                <label for="Miss.">Miss.</label>
+            </div>
+        </div>
 
-                <div class="form-row">
-                    <label for="position">Your Position</label>
-                    <input id="position" type="text" value="" />
-                </div>
-            
-                <div class="form-row">
-                    <label for="mobile">Mobile Number</label>
-                    <input id="mobile" type="text" value="" />
-                </div>
-                
-                <div class="form-row">
-                    <label for="Comments">Give Your Comments</label>
-                    <textarea id="Comments" rows="4" cols="50" placeholder="Write your comments here..."></textarea>
-                </div>
-                
-                <button type="submit" class="update-button">Send</button>
-            </fieldset>
-        </form>
-    </div>
+        <div class="form-row">
+            <label for="fullName">Your Name</label>
+            <input id="fullName" name="name" type="text" value="" required />
+        </div>
+
+        <div class="form-row">
+            <label for="position">Your Position</label>
+            <input id="position" name="position" type="text" value="" required />
+        </div>
+
+        <div class="form-row">
+            <label for="mobile">Mobile Number</label>
+            <input id="mobile" name="mobile" type="text" value="" required />
+        </div>
+
+        <div class="form-row">
+            <label for="comments">Give Your Comments</label>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Write your comments here..." required></textarea>
+        </div>
+
+        <button type="submit" class="update-button">Send</button>
+
+    </form>
+</div>
+
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

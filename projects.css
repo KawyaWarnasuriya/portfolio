@@ -14,6 +14,7 @@ body{
     overflow: hidden;
     background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
     overflow-y: scroll; /* Enables vertical scrolling */
+
     
 }
 nav{
@@ -115,6 +116,17 @@ nav{
 }
 
 /*slideshow section*/
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 .slideshow-container {
     font-family: Arial, sans-serif;
     max-width: 600px;
@@ -124,7 +136,12 @@ nav{
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(216, 158, 158, 0.2);
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 1.5s ease-out forwards;
+    
 }
+
 
 img {
     vertical-align: middle;
@@ -218,12 +235,7 @@ img {
     color: #007bff;
 }
 
-
-
-
-
-
-@media (max-width:800px) {
+@media (max-width:768px) {
     body{
         overflow-y: visible;
     }
@@ -270,6 +282,10 @@ img {
   
     .column img {
         width: 60px;
+    }
+
+    .slideshow-container {
+        width: 80%;
     }
 }
   

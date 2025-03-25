@@ -11,7 +11,8 @@
   <link rel="about" href="about.html">
   <link rel="project" href="projects.html">
   <link rel="skills" href="skills.html">
-  <link rel="contactus" href="contactus.html">
+  <link rel="certificate" href="certificate.html">
+  <link rel="contactus" href="contactus.php">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
@@ -26,7 +27,8 @@
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="projects.html">Projects</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
-                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contactus.html">Contact Me</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="certificate.html">Certificate</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contactus.php">Contact Me</a></div>
             </div>
             <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
@@ -36,12 +38,14 @@
                 <a href="about.html">About</a>
                 <a href="projects.html">Projects</a>
                 <a href="skills.html">Skills</a>
-                <a href="contactus.html">Contact Us</a>
+                <a href="certificate.html">Certificate</a>
+                <a href="contactus.php">Contact Us</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
     </nav>
 
+    <!--About Me-->
     <section class="about-me">
         <div class="cards">
             <div class="card">
@@ -89,9 +93,9 @@
           </p>
     </section>
     
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({offset:0});
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+      AOS.init({offset:0});
     </script>
     <script>
         function hamburg(){
@@ -102,7 +106,7 @@
             const navbar = document.querySelector(".dropdown")
             navbar.style.transform = "translateY(-500px)"
         }
-    </script>
+  </script>
     
 </body>
 </html>
