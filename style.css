@@ -178,14 +178,20 @@ section{
     }
 }
 @keyframes words {
-    0%, 33%{
+    0%, 20%{
+        content: "Fullstack Developer";
+    }
+    21%, 40%{
         content: "Web Developer";
     }
-    34%, 66%{
-        content: "UI/ UX Designer";
-    }
-    67%, 100%{
+    41%, 60%{
         content: "Mobile Developer";
+    }
+    61%, 80%{
+        content: "Angular Developer";
+    }
+    81%, 100%{
+        content: "UI/UX Designer";
     }
 }
 .content p{
