@@ -112,6 +112,7 @@ nav{
     background-color: rgb(109,67, 0);
 }
 
+/*certificate*/
 @keyframes rotateIn {
     from {
         opacity: 0;
@@ -122,100 +123,102 @@ nav{
         transform: rotate(0);
     }
 }
-
-.main-container {
-    font-family: Arial, Helvetica, sans-serif;
+.row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-    padding: 20px;
-    background-color: #f5f5f5;
+    margin: 60px ;
+    gap:10px;
+
 }
   
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: 30px auto;
+    position: relative;
+    width: 25%;
+    margin: 5px;
 }
   
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-family: Arial;
-    background: rgba(231, 213, 184, 0.5);
-    padding: 10px;
-    border:1px solid rgb(109,67, 0);
-    border-radius: 8px;
-    opacity: 0;
-    transform: rotate(-10deg);
-    animation: rotateIn 1.5s ease-out forwards;
-    
-}
-  
-.card img {
+.image {
+    display: block;
     width: 100%;
     height: auto;
-    border: 2px solid rgb(109,67, 0);
-    border-radius: 8px;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    opacity: 0;
+    border: 1px solid rgb(109,67, 0);
+    border-radius: 6px;
+    transform: rotate(-10deg);
+    animation: rotateIn 1.5s ease-out forwards;
 }
-
-.card img:hover{
-    transform: scale(1.1); 
-}
-
   
-.title {
-    color: blue;
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background:rgba(248, 223, 185, 0.7);
+    border-radius: 6px;
+    color: #000000; 
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    padding: 10px;
+    text-align: center;
+}
+  
+.container:hover .overlay {
+    opacity: 1;
+}
+  
+.overlay p {
+    margin: 10px 0;
     font-size: 15px;
+    font-weight: bold;
 }
   
-button {
-    border: 1px solid rgb(109,67, 0);    
-    border-radius: 8px;
+
+.btn {
+    border: 1px solid #6d4300;    
+    border-radius: 6px;
     outline: 0;
+    width: 40%;
     display: inline-block;
-    padding: 8px;
+    padding: 6px;
     color: rgb(109,67, 0);
-    background-color: rgb(252, 226, 205);
+    background-color: rgb(248, 223, 185); 
+    text-decoration: none;
     text-align: center;
     cursor: pointer;
-    width: 90%;
     font-size: 18px;
     font-weight: bold;
     transition: transform 0.2s ease, background-color 0.3s ease;
 }
   
-button:hover, a:hover {
-    background:transparent;
-    color: rgb(252, 251, 250);
+.btn:hover, a:hover {
+    background-color:rgb(253, 212, 151);
     text-shadow: 2px 2px 5px rgb(233, 142, 38);
-    transform: scale(1.1);  /* Slightly enlarges the button */
+    
 
 }
   
-/* Responsive Grid */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      width: 90%;
       align-items: center;
-      width: 60%;
     }
+
+    .overlay{
+        padding: 10px;
+    }
+
+    .overlay p{
+        font-size: 12px;
+    }
+
+    .btn{
+        width: 30%;
+        font-size: 12px;
+    }
+
 }
 
-@media (max-width:884px) {
+@media (max-width:768px) {
     body{
         overflow-y: visible;
     }
@@ -246,13 +249,7 @@ button:hover, a:hover {
     .cancel{
         color: white;
     }
-    .main-container .image{
-        width: 80%;
-        margin-bottom: 0px;
-    }
-    .main-container .content{
-        width: 80%;
-    }
+    
     .content{
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
