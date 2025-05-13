@@ -126,20 +126,20 @@ nav{
     transform: translate(-50%, -50%);
     z-index: -1;
 }
-.profile-details{
+.profile-details {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
+    width: 100%; /* Ensure the full width is used */
     margin-top: 0px;
-    
-    
 }
+
 fieldset {
-    width: 600px;
+    width: 100%;  
     padding: 15px;
     border-radius: 12px;
-    border: 1px solid white; /* Remove default border */
+    border: 1px solid white; 
     position: relative;
 }
   
@@ -155,11 +155,15 @@ legend {
     color:rgb(247, 245, 242);
     text-shadow:rgb(240, 178, 79) ;
 }
-form{
+
+#contactForm {
+    width: 40%;  
+    max-width: 1000px;  
+    margin: 0 auto;  
     border: 2px solid white;
     background-color: rgba(255, 254, 254, 0.4);
-    border-radius: 10px;
-    padding : 10px;
+    padding: 20px;
+    border-radius: 12px;
 }
 .form-row {
     border-radius: 5px;
@@ -195,13 +199,14 @@ textarea {
 .radio-group {
     gap: 10px;
 }
+
   
 /* Update Button */
 .update-button {
     background: rgb(109,67, 0);
     color: #fff;
     border: none;
-    width: 100px;
+    width: 100%;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
@@ -271,6 +276,10 @@ textarea {
     fieldset {
         width: 80%; /* Adjust width for smaller screens */
         padding: 20px;
+    }
+    #contactForm {
+        width: 80%; 
+        padding: 15px; /
     }
 }
 @media (max-width: 800px) {
