@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website! 🚀 This site showcases my skills, projects, and achievements
 <br>
 
-🔗 [Live Demo](https://portfolio-seven-wheat-68.vercel.app)
+🔗 [Live Demo](https://kawyawarnasuriya.github.io/portfolio/)
 
 ---
 
